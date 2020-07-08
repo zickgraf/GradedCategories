@@ -873,6 +873,10 @@ InstallMethod( PositivelyZGradedCategory,
         
     od;
     
+    LoadPackage( "FinSetsForCAP" );
+    obj := FinSet( 0 );
+    mor := IdentityMorphism( obj );
+    
     ## e.g., ZeroObject
     create_func_object0 :=
       function( name )
@@ -950,6 +954,54 @@ InstallMethod( PositivelyZGradedCategory,
         oper := ValueGlobal( name );
         
         type := CAP_INTERNAL_METHOD_NAME_RECORD.(name).io_type;
+
+        filter_list := CAP_INTERNAL_METHOD_NAME_RECORD.(name).filter_list;
+
+        arg := List( [ 1 .. Length( type[1] ) ], function( i )
+            
+            if filter_list[i] = "object" then
+                
+                return obj;
+                
+            elif filter_list[i] = "morphism" then
+                
+                return mor;
+                
+            elif filter_list[i] = "list_of_objects" then
+                
+                return [ obj, obj ];
+                
+            elif filter_list[i] = "list_of_morphisms" then
+            
+                return [ mor, mor ];
+                
+            elif filter_list[i] = IsInt then
+            
+                return 1;
+                
+            elif filter_list[i] = IsList then
+            
+                return [ mor, mor ];
+                
+            else
+                
+                Display( filter_list[i] );
+                Error( "unhandled filter list" );
+                
+            fi;
+            
+        end );
+
+        res := CAP_INTERNAL_GET_CORRESPONDING_OUTPUT_OBJECTS( type, arg );
+
+        if ForAny( res, r -> r = fail ) then
+            
+            Display( type );
+            Display( name );
+            
+            Error( "fail" );
+            
+        fi;
         
         return
           function( arg )
@@ -983,6 +1035,54 @@ InstallMethod( PositivelyZGradedCategory,
         
         type := info.io_type;
         
+        filter_list := CAP_INTERNAL_METHOD_NAME_RECORD.(name).filter_list;
+
+        arg := List( [ 1 .. Length( type[1] ) ], function( i )
+            
+            if filter_list[i] = "object" then
+                
+                return obj;
+                
+            elif filter_list[i] = "morphism" then
+                
+                return mor;
+                
+            elif filter_list[i] = "list_of_objects" then
+                
+                return [ obj, obj ];
+                
+            elif filter_list[i] = "list_of_morphisms" then
+            
+                return [ mor, mor ];
+                
+            elif filter_list[i] = IsInt then
+            
+                return 1;
+                
+            elif filter_list[i] = IsList then
+            
+                return [ mor, mor ];
+                
+            else
+                
+                Display( filter_list[i] );
+                Error( "unhandled filter list" );
+                
+            fi;
+            
+        end );
+
+        res := CAP_INTERNAL_GET_CORRESPONDING_OUTPUT_OBJECTS( type, arg );
+        
+        if ForAny( res, r -> r = fail ) then
+            
+            Display( type );
+            Display( name );
+            
+            Error( "fail" );
+            
+        fi;
+        
         return
           function( arg )
             local src_trg, S, T;
@@ -1004,6 +1104,7 @@ InstallMethod( PositivelyZGradedCategory,
     recnames := ShallowCopy( ListInstalledOperationsOfCategory( C ) );
     
     recnames := Intersection( recnames, CAP_INTERNAL_METHOD_NAME_LIST_FOR_GRADED_CATEGORY );
+    recnames := CAP_INTERNAL_METHOD_NAME_LIST_FOR_GRADED_CATEGORY;
     
     skip := [ "MultiplyWithElementOfCommutativeRingForMorphisms",
               "Lift",
