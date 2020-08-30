@@ -1,9 +1,9 @@
 name: GradedCategories
-version: "2020.07.25"
+version: "2020.07.27"
 license: "GPL-2.0-or-later"
-date: 2020-07-25
+date: 2020-07-27
 description: |
-    Graded categories
+    Graded closures of categories
 
 authors:
     - name: Mohamed Barakat
@@ -44,7 +44,7 @@ packageinfo: https://homalg-project.github.io/GradedCategories/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/homalg-project/GradedCategories/releases/download/v2020.07.25/GradedCategories-2020.07.25.tar.gz
+      url: https://github.com/homalg-project/GradedCategories/releases/download/v2020.07.27/GradedCategories-2020.07.27.tar.gz
 
 abstract: |
 
@@ -56,8 +56,8 @@ keywords: |
 citeas: |
     <p class='BibEntry'>
     [<span class='BibKey'>BZ20</span>]   <b class='BibAuthor'>Barakat, M. and Zickgraf, F.</b>,
-     <i class='BibTitle'>GradedCategories, Graded categories,
-             Version 2020.07.25</i>
+     <i class='BibTitle'>GradedCategories, Graded closures of categories,
+             Version 2020.07.27</i>
      (<span class='BibYear'>2020</span>)<br />
     (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://homalg-project.github.io/GradedCategories">https://homalg-project.github.io/GradedCategories</a></span>.
@@ -65,9 +65,9 @@ citeas: |
     
 
 bibtex: |
-    @misc{ GradedCategories2020.07.25,
+    @misc{ GradedCategories2020.07.27,
       author =           {Barakat, M. and Zickgraf, F.},
-      title =            {{GradedCategories}, Graded categories, {V}ersion 2020.07.25},
+      title =            {{GradedCategories}, Graded closures of categories, {V}ersion 2020.07.27},
       month =            {Jul},
       year =             {2020},
       note =             {GAP package},

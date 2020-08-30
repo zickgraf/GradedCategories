@@ -3,13 +3,13 @@
                                [1X GradedCategories [101X
   
   
-                              [1X Graded categories [101X
+                        [1X Graded closures of categories [101X
   
   
-                                   2020.07.25
+                                   2020.07.27
   
   
-                                  25 July 2020
+                                  27 July 2020
   
   
                                 Mohamed Barakat
