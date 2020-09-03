@@ -88,7 +88,7 @@
   [33X[1;0Y[29X[2XPositivelyZGradedCategory[102X( [3XC[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya [5XCAP[105X category[133X
   
-  [33X[0;0YConstruct the positively [23XZ[123X-graded closure of the category [3XA[103X.[133X
+  [33X[0;0YConstruct the positively [23XZ[123X-graded closure of the category [3XC[103X.[133X
   
   [1X1.4-2 ObjectInPositivelyZGradedCategory[101X
   
@@ -99,12 +99,16 @@
   [33X[1;0Y[29X[2XObjectInPositivelyZGradedCategory[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya [5XCAP[105X object[133X
   
+  [33X[0;0YConstruct an object in a positively [23XZ[123X-graded category.[133X
+  
   [1X1.4-3 MorphismInPositivelyZGradedCategory[101X
   
   [33X[1;0Y[29X[2XMorphismInPositivelyZGradedCategory[102X( [3XS[103X, [3XL[103X, [3XT[103X ) [32X operation[133X
   [33X[1;0Y[29X[2XMorphismInPositivelyZGradedCategory[102X( [3XS[103X, [3Xf[103X, [3XT[103X ) [32X operation[133X
   [33X[1;0Y[29X[2XMorphismInPositivelyZGradedCategory[102X( [3XS[103X, [3Xphi[103X, [3Xdegree[103X, [3XT[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ya [5XCAP[105X morphism[133X
+  
+  [33X[0;0YConstruct a morphism in a positively [23XZ[123X-graded category.[133X
   
   [1X1.4-4 ComponentInclusionMorphism[101X
   
