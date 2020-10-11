@@ -1,4 +1,4 @@
-#
+# SPDX-License-Identifier: GPL-2.0-or-later
 # GradedCategories: Graded closures of categories
 #
 # This file contains package meta data. For additional information on
@@ -11,7 +11,7 @@ SetPackageInfo( rec(
 PackageName := "GradedCategories",
 Subtitle := "Graded closures of categories",
 Version := Maximum( [
-                   "2020.09.07", ## Mohamed's version
+                   "2020.10.01", ## Mohamed's version
                    ## this line prevents merge conflicts
                    "2020.08.29", ## Fabian's version
                    ] ),
